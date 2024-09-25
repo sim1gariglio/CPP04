@@ -6,7 +6,7 @@
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:11:05 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/11 15:36:03 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/16 10:53:37 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 Animal::Animal() : type("Animal")
 {
-	std::cout << this->type << " was created." << std::endl;
+	std::cout << "Animal was created." << std::endl;
 }
 
 Animal::Animal(std::string type) : type(type)
 {
-	std::cout << this->type << " was created." << std::endl;
+	std::cout << "Animal was created." << std::endl;
 }
 
 Animal::Animal(const Animal &copy)
 {
 	*this = copy;
-	std::cout << this->type << " was created." << std::endl;
+	std::cout << "Animal was created." << std::endl;
 }
 
 Animal::~Animal()
 {
-	std::cout << this->type << " was destroyed." << std::endl;
+	std::cout << "Animal was destroyed." << std::endl;
 }
 
 Animal &Animal::operator=(const Animal &copy)
@@ -43,6 +43,21 @@ Animal &Animal::operator=(const Animal &copy)
 std::string Animal::getType() const
 {
 	return (this->type);
+}
+
+Brain* Animal::getBrain() const
+{
+	return (this->brain);
+}
+
+void Animal::setBrain(Brain* brain)
+{
+	this->brain = brain;
+}
+
+void Animal::setType(std::string type)
+{
+	this->type = type;
 }
 
 void Animal::makeSound() const
