@@ -6,7 +6,7 @@
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:11:03 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/13 11:17:37 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/16 11:04:29 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 # define ANIMAL_HPP
 
 # include <iostream>
-
+# include "Brain.hpp"
+# define YELLOW "\033[33m"
+# define RED "\033[31m"
+# define GREEN "\033[32m"
+# define RESET "\033[0m"
 class Animal
 {
 	protected:
 		std::string type;
+		Brain* brain;
 	public:
 		Animal();
 		Animal(std::string type);
@@ -27,7 +32,9 @@ class Animal
 		Animal &operator=(const Animal &copy);
 		std::string getType() const;
 		void 		setType(std::string type);
-		virtual void makeSound() const;
+		Brain* 		getBrain() const;
+		void 		setBrain(Brain* brain);
+		virtual void makeSound() const = 0;
 };
 
 #endif

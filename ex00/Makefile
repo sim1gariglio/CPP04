@@ -6,7 +6,7 @@
 #    By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/20 09:14:44 by sgarigli          #+#    #+#              #
-#    Updated: 2024/09/11 15:26:51 by sgarigli         ###   ########.fr        #
+#    Updated: 2024/09/13 10:05:59 by sgarigli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRC = main.cpp \
 	Animal.cpp \
 	Dog.cpp \
 	Cat.cpp \
+	WrongAnimal.cpp \
+	WrongCat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
