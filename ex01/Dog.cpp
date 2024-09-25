@@ -6,7 +6,7 @@
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:13:30 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/16 10:59:00 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:27:22 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,9 @@ Dog &Dog::operator=(const Dog &copy)
 {
 	if (this != &copy)
 	{
-		this->type = copy.type;
-		this->brain = new Brain(*copy.brain);
+		Animal::operator=(copy);
+		delete this->brain;
+		this->brain = new Brain(*copy.getBrain());
 	}
 	return (*this);
 }
@@ -51,4 +52,14 @@ Dog &Dog::operator=(const Dog &copy)
 void Dog::makeSound() const
 {
 	std::cout << "Bark" << std::endl;
+}
+
+Brain* Dog::getBrain() const
+{
+	return (this->brain);
+}
+
+void Dog::setBrain(Brain* brain)
+{
+	this->brain = brain;
 }
