@@ -6,7 +6,7 @@
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:13:28 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/13 11:19:27 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:18:34 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class Cat : public Animal
         Cat();
 		Cat(std::string type);
         Cat(const Cat &copy);
-        ~Cat();
+        virtual ~Cat();
         Cat &operator=(const Cat &copy);
-        void makeSound() const;
+        virtual void makeSound() const;
 };
 
 #endif

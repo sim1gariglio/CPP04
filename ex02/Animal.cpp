@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                        :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:11:05 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/16 11:11:54 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/16 16:07:16 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,6 @@ Animal &Animal::operator=(const Animal &copy)
 std::string Animal::getType() const
 {
 	return (this->type);
-}
-
-Brain* Animal::getBrain() const
-{
-	return (this->brain);
-}
-
-void Animal::setBrain(Brain* brain)
-{
-	this->brain = brain;
 }
 
 void Animal::setType(std::string type)

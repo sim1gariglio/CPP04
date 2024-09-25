@@ -6,7 +6,7 @@
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:11:03 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/16 10:56:17 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/16 16:06:48 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Animal
 {
 	protected:
 		std::string type;
-		Brain* brain;
 	public:
 		Animal();
 		Animal(std::string type);
@@ -32,8 +31,7 @@ class Animal
 		Animal &operator=(const Animal &copy);
 		std::string getType() const;
 		void 		setType(std::string type);
-		Brain* 		getBrain() const;
-		void 		setBrain(Brain* brain);
+
 		virtual void makeSound() const;
 };
 

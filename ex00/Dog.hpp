@@ -6,7 +6,7 @@
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:13:26 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/13 11:19:32 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:18:48 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class Dog : public Animal
 		Dog();
 		Dog(std::string type);
 		Dog(const Dog &copy);
-		~Dog();
+		virtual ~Dog();
 		Dog &operator=(const Dog &copy);
-		void makeSound() const;
+		virtual void makeSound() const;
 };
 
 #endif

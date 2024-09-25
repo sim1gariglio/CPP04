@@ -6,7 +6,7 @@
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:41:21 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/16 10:56:54 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:22:52 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,14 @@ class Brain
 	public:
 		Brain();
 		Brain(const Brain &copy);
-		virtual ~Brain();
+		~Brain();
 		Brain &operator=(const Brain &copy);
+
+		void	setIdea(int index, std::string idea);
+		std::string	getIdea(int index) const;
+
+		void 		printIdea(int index) const;
+		void 		printAllIdeas() const;
 };
 
 #endif
