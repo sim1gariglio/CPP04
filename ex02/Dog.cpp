@@ -6,7 +6,7 @@
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:13:30 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/24 15:27:22 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:46:20 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ Dog &Dog::operator=(const Dog &copy)
 	if (this != &copy)
 	{
 		Animal::operator=(copy);
-		delete this->brain;
 		this->brain = new Brain(*copy.getBrain());
 	}
 	return (*this);

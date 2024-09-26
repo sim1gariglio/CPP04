@@ -6,7 +6,7 @@
 /*   By: sgarigli <sgarigli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 15:13:32 by sgarigli          #+#    #+#             */
-/*   Updated: 2024/09/24 15:24:39 by sgarigli         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:45:26 by sgarigli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ Cat &Cat::operator=(const Cat &copy)
 	if (this != &copy)
 	{
 		Animal::operator=(copy);
-		delete this->brain;
 		this->brain = new Brain(*copy.getBrain());
 	}
 	return (*this);
